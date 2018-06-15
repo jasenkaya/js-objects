@@ -38,7 +38,16 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
  "My dog `name` is `age` year old and likes to `speak` at strangers."
 */ 
 
+var dog = {
+    name: "sally",
+    age: 14,
+    vegiterian: false,
+    color: ["black", "white"],
+    speak: function speaking(){ 
+        return "bark!"}
+}
 
+console.log("My dog " + dog.name +" is " + dog.age + " years old and likes to " + dog.speak() + " at strangers.")
 
 //An empty object
 
@@ -56,6 +65,16 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
 */
 
 
+var kicks = {}
+
+kicks.brand = "Soap"
+kicks.color = "cornflower blue"
+kicks.size = 10
+kicks.price = 88
+kicks.buy = function buying(){return "Now I is a cool kid!!"}
+
+console.log(kicks)
+
 /* 
 
 4. Declare a variable named `plainBox` and set its value to be an EMPTY object.
@@ -66,6 +85,14 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
 
   console.log the object
 */
+
+var plainBox = {}
+
+plainBox.color= "Green"
+plainBox.size = 17
+plainBox.contents = []
+
+console.log(plainBox)
 
 
 /*
