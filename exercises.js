@@ -306,17 +306,19 @@ console.log(sumObj)
 
  var plainBox = {}
 function putInPlainBox(newNewNewObject){
-for (var i=0; i<11; i++){
-  newNewNewObject.contents =[]
-  newNewNewObject.contents[i] = Math.floor(Math.random() * 10)
-console.log(Math.floor(Math.random() * 10))
+  newNewNewObject.contents =[0]
+  for (var i=0; i<11; i++){
+  var random =   Math.floor(Math.random() * 10)
+  console.log(random)
+  newNewNewObject.contents[i]=random
+  //console.log(random)
 }
 return newNewNewObject
 }
 
-putInPlainBox(plainBox)
+var plainBoxResult = putInPlainBox(plainBox)
 
-console.log(plainBox)
+console.log(plainBoxResult)
 
 
 /*
@@ -330,6 +332,25 @@ console.log(plainBox)
     Invoke your function and pass in your stockCar object, store the result to a variable named isAutomaticTransmission and use `console.log` to inspect your results.
  */
 
+// var stockCar = {
+//   model: "Ford",
+//   year: 2001,
+//   automaticTrans: false,
+//   driver: null,
+//   passengers: []
+// }
+
+// console.log(stockCar)
+
+ function detectingTransmission(object11){
+    if(object11.automaticTrans){
+      console.log("you have an automatic transmission")
+    }else{
+      console.log("we dont like driving manuals")
+    }
+
+ }
+ detectingTransmission(stockCar)
 
 /*
 12.  Who's driving this thing?!
@@ -343,6 +364,13 @@ console.log(plainBox)
       your results. Consider using `plainPerson` as your driver.
  */
 
+function addDriver (addcar, addperson){
+  addcar.driver = addperson
+  return addcar
+}
+var newStockCar = addDriver(stockCar, "Jasen")
+
+console.log(newStockCar)
 
 
 
@@ -350,7 +378,7 @@ console.log(plainBox)
     #Final Boss
     The Dev League instructors want to ride your whip!
 
-        Declare a variable named `passengerList` and set it to be `['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor']`
+    Declare a variable named `passengerList` and set it to be `['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor']`
 
         Declare a variable named `passengerAges` and set it to be `[19, 12, 21, 22, 16, 9, 19, 20, 15]`
 
@@ -378,3 +406,37 @@ console.log(plainBox)
         'Marifel, age 19, is riding dirty!'
         'Victor, age 19, is riding dirty!'
  */
+
+var passengerList = ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor']
+var passengerAges = [19, 12, 21, 22, 16, 9, 19, 20, 15]
+var devCar ={}
+
+function addPassengers(car, names, ages){
+  for (var i=0; i<names.length; i++){
+    // car.name[i]=names[i]
+    // car.age[i]=ages[i]
+    console.log(names[i])
+  }
+  console.log(car)
+  return car
+}
+
+ addPassengers (devCar, passengerList, passengerAges)
+// console.log(devCar)
+
+// function displayPassengers(car){
+//   for(var i=0; i<car.name.length; i++){
+//     console.log(car.name[i]+", age "+ car.age + ", is riding dirty!")
+
+//   }
+// }
+
+
+// function buildPerson(person, nameString, age){
+//   //var person = {}
+//   person.name = nameString
+//   person.age = age
+//   return person
+// }
+// buildPerson(plainPerson, "Jasen", 34)
+// console.log(plainPerson)
