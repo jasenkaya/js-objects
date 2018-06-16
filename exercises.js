@@ -252,6 +252,20 @@ printOrders(arrayOfObjects)
         to inspect your results.
 */
 
+var sumObj={
+    a: 1,
+    b: 2,
+    result: undefined
+}
+
+function objectAddition(newObject){  
+  newObject.result=newObject.a+newObject.b
+    return newObject
+}
+
+objectAddition(sumObj)
+
+console.log(sumObj)
 
 /*
 9. Print sum function and add as new key-value
@@ -270,6 +284,15 @@ printOrders(arrayOfObjects)
         **create more** objects and invoke your function multiple times.
  */
 
+function printObj(newnewObject){
+  newnewObject.output=sumObj.a + " + " + sumObj.b+ " = "+ sumObj.result
+  return newnewObject 
+}
+
+printObj(sumObj)
+
+console.log(sumObj)
+
 
 /*
 10. Putting stuff in `plainBox`
@@ -280,6 +303,20 @@ printOrders(arrayOfObjects)
         Invoke your function and pass in your object (which should be `plainBox`), store the result to a variable named 
         plainBoxResult and use `console.log` to inspect your results.
  */
+
+ var plainBox = {}
+function putInPlainBox(newNewNewObject){
+for (var i=0; i<11; i++){
+  newNewNewObject.contents =[]
+  newNewNewObject.contents[i] = Math.floor(Math.random() * 10)
+console.log(Math.floor(Math.random() * 10))
+}
+return newNewNewObject
+}
+
+putInPlainBox(plainBox)
+
+console.log(plainBox)
 
 
 /*
